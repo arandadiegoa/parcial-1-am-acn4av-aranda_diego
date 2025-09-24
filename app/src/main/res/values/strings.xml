@@ -12,6 +12,8 @@
     <string name="text_register">"Registrar"</string>
     <string name="text_hello">"Hola Diego"</string>
     <string name="text_login">"Hola desde login"</string>
+    <string name="descripcion_del_logo">Logo de la aplicación KindyStarts</string>
+
 
 
 </resources>
