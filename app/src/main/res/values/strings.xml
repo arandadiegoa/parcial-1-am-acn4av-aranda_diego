@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">KindyStarts</string>
-    <string name="text_msg">"Hoy es un gran día para aprender jugando"</string>
     <string name="text_logo">"Logo de la app KindyStarts"</string>
     <string name="text_button_createAccount">"Crear cuenta"</string>
     <string name="text_button_login">"Iniciar sesión"</string>
@@ -14,6 +13,18 @@
     <string name="text_login">"Hola desde login"</string>
     <string name="descripcion_del_logo">Logo de la aplicación KindyStarts</string>
 
+
+    <string-array name="mensajes_bienvenida">
+        <item>🌞 Hoy es un gran día para aprender jugando</item>
+        <item>🌱 Cada pequeño paso cuenta en el crecimiento</item>
+        <item>🎶 Las risas son la mejor melodía del jardín</item>
+        <item>🐥 Jugar es la forma favorita de aprender</item>
+        <item>📚 Los primeros recuerdos son los más valiosos</item>
+        <item>🌻 Cada niño es una semilla única que florece con cuidado</item>
+        <item>🧩 Descubrir, crear, compartir: así crecemos</item>
+        <item>🌈 Un mundo de colores espera por vos</item>
+        <item>🐞 La infancia es la tierra donde florece la vida</item>
+    </string-array>
 
 
 </resources>

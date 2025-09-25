@@ -5,4 +5,6 @@
 
     <color name = "app_background_color">#FFF3E0</color>
     <color name="button">#BAFDFF</color>
+    <color name="diagolo_background_color">#FFF3E0</color>
+    <color name="dialogo_stroke_color">#BAFDFF</color>
 </resources>
