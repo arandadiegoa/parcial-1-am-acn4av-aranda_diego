@@ -1,12 +1,13 @@
-package com.arandadiegoa.kindystarts
+package com.arandadiegoa.kindystarts.ui.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.arandadiegoa.kindystarts.R
 
-class LoginActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_home)
     }
 }

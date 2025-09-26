@@ -1,51 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+<LinearLayout
+    android:id="@+id/register_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/app_background_color"
-    android:padding="24dp" >
+    android:padding="24dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_registerTitle"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
 
-    <EditText
-        android:id="@+id/editTextParentName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/text_fullName"
-        android:inputType="textPersonName"
-        android:autofillHints="name"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_registerTitleTutor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editTextEmail"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutParentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_person"
+            style="@style/Widget.App.TextInputLayout.Underline"
+            android:autofillHints="name" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextParentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_fullName"
+                android:inputType="textFilter|textNoSuggestions"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_email"
+            style="@style/Widget.App.TextInputLayout.Underline"
+            android:autofillHints="emailAddress"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_email"
+                android:inputType="textEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_contact_phone"
+            style="@style/Widget.App.TextInputLayout.Underline"
+            android:autofillHints="phone"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_phone"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_pass_key"
+            style="@style/Widget.App.TextInputLayout.Underline"
+            android:autofillHints="password"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_password"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/text_email"
-        android:inputType="textEmailAddress"
-        android:autofillHints="emailAddress"
-        />
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
 
-    <EditText
-        android:id="@+id/editTextPhoneNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/text_phone"
-        android:inputType="phone"
-        android:autofillHints="phone"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_registerTitleChild"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="35dp"
+            />
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/text_password"
-        android:inputType="textPassword"
-        android:autofillHints="password" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutChildName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_child"
+            style="@style/Widget.App.TextInputLayout.Underline"
+            android:autofillHints="name" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextChildName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_fullName"
+                android:inputType="textFilter|textNoSuggestions"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_calendar"
+            style="@style/Widget.App.TextInputLayout.Underline"
+            android:autofillHints="birthdate"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_birthDate"
+                android:focusable="false"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:startIconDrawable="@drawable/ic_home"
+            style="@style/Widget.App.TextInputLayout.Underline"
+            android:autofillHints="home"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_home"
+                android:inputType="textFilter|textNoSuggestions" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/buttonSubmitRegister"
@@ -56,8 +201,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
         android:textColor="@color/black"
-
         />
 
-
 </LinearLayout>
+
+</ScrollView>

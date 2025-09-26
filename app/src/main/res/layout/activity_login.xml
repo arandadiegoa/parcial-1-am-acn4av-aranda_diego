@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background_color"
-    tools:context=".LoginActivity">
+    tools:context=".ui.auth.LoginActivity">
 
     <TextView
         android:id="@+id/textViewGreeting"
