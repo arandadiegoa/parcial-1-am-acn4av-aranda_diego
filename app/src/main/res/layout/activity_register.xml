@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:theme="@style/Theme.App.RegisterScreen"
+    tools:context=".ui.auth.RegisterActivity"
     >
 
 <LinearLayout
@@ -43,7 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/ic_person"
-            style="@style/Widget.App.TextInputLayout.Underline"
             android:autofillHints="name" >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextParentName"
@@ -60,7 +61,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/ic_email"
-            style="@style/Widget.App.TextInputLayout.Underline"
             android:autofillHints="emailAddress"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -79,7 +79,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/ic_contact_phone"
-            style="@style/Widget.App.TextInputLayout.Underline"
             android:autofillHints="phone"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -98,7 +97,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/ic_pass_key"
-            style="@style/Widget.App.TextInputLayout.Underline"
             android:autofillHints="password"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -136,7 +134,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/ic_child"
-            style="@style/Widget.App.TextInputLayout.Underline"
             android:autofillHints="name" >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextChildName"
@@ -153,7 +150,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/ic_calendar"
-            style="@style/Widget.App.TextInputLayout.Underline"
             android:autofillHints="birthdate"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -176,7 +172,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:startIconDrawable="@drawable/ic_home"
-            style="@style/Widget.App.TextInputLayout.Underline"
             android:autofillHints="home"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -188,6 +183,24 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/menu_option_hall"
+            style="@style/Widget.App.TextInputLayout.Underline.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/text_hall"
+            >
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteHall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                tools:ignore="LabelFor"
+                android:popupBackground="@drawable/dialogo_background"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 

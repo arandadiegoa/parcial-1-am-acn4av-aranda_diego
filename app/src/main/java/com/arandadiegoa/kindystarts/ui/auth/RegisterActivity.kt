@@ -3,6 +3,8 @@ package com.arandadiegoa.kindystarts.ui.auth
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.Toast
 import com.arandadiegoa.kindystarts.R
@@ -20,6 +22,7 @@ class RegisterActivity : BaseActivity() {
         rootView.post {
             rootView.requestFocus()
         }
+
         // Referencias
         val parentName = findViewById<TextInputEditText>(R.id.editTextParentName)
         val email = findViewById<TextInputEditText>(R.id.editTextEmail)
@@ -30,9 +33,21 @@ class RegisterActivity : BaseActivity() {
         val address = findViewById<TextInputEditText>(R.id.editTextHome)
         val submitButton = findViewById<Button>(R.id.buttonSubmitRegister)
 
-
-
         setupDatePicker(birthDate)
+
+        /*Options Halls */
+
+        //obtener las salas
+        val halls = resources.getStringArray(R.array.option_hall)
+
+        // Creamos el adaptador que une los datos con la vista
+        val adapter = ArrayAdapter(this, R.layout.dropdown_item, halls)
+
+        //Obtener la referencia
+        val autoCompleteTextView = findViewById<AutoCompleteTextView>(R.id.autoCompleteHall)
+
+        //Mostrar las opciones
+        autoCompleteTextView.setAdapter(adapter)
 
         submitButton.setOnClickListener {
             val strParent = parentName.text.toString()

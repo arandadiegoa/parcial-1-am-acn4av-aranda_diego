@@ -10,11 +10,27 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
-    <style name="Widget.App.TextInputLayout.Underline" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+    <style name="Widget.App.TextInputLayout.Underline"
+        parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
         <item name="boxBackgroundColor">@color/app_background_color</item>
         <item name="boxStrokeColor">@color/black</item>
         <item name="hintTextColor">@color/black</item>
     </style>
+
+    <style name="Widget.App.TextInputLayout.Underline.ExposedDropdownMenu"
+        parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/app_background_color</item>
+        <item name="boxStrokeColor">@color/black</item>
+        <item name="hintTextColor">@color/black</item>
+    </style>
+
+    <style name="Theme.App.RegisterScreen" parent="Base.Theme.KindyStarts">
+        <item name="textInputStyle">@style/Widget.App.TextInputLayout.Underline</item>
+    </style>
+
+
+
+
 
     <style name="Theme.KindyStarts" parent="Base.Theme.KindyStarts"  />
 </resources>

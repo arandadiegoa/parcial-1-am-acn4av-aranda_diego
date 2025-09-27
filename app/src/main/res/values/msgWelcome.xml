@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mensajes_bienvenida">
+        <item>🌞 Hoy es un gran día para aprender jugando</item>
+        <item>🌱 Cada pequeño paso cuenta en el crecimiento</item>
+        <item>🎶 Las risas son la mejor melodía del jardín</item>
+        <item>🐥 Jugar es la forma favorita de aprender</item>
+        <item>📚 Los primeros recuerdos son los más valiosos</item>
+        <item>🌻 Cada niño es una semilla única que florece con cuidado</item>
+        <item>🧩 Descubrir, crear, compartir: así crecemos</item>
+        <item>🌈 Un mundo de colores espera por vos</item>
+        <item>🐞 La infancia es la tierra donde florece la vida</item>
+    </string-array>
+</resources>
