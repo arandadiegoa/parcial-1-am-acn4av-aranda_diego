@@ -3,7 +3,7 @@
     <string name="text_logo">"Logo de la app KindyStarts"</string>
     <string name="text_button_createAccount">"Crear cuenta"</string>
     <string name="text_button_login">"Iniciar sesión"</string>
-    <string name="text_hello">"Hola Diego"</string>
+    <string name="text_hello">"Bienvenido "</string>
     <string name="text_login">"Hola desde login"</string>
     <string name="descripcion_del_logo">Logo de la aplicación KindyStarts</string>
 </resources>

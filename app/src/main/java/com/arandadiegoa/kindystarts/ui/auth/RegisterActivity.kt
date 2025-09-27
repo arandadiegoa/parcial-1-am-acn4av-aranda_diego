@@ -23,6 +23,7 @@ class RegisterActivity : BaseActivity() {
             rootView.requestFocus()
         }
 
+
         // Referencias
         val parentName = findViewById<TextInputEditText>(R.id.editTextParentName)
         val email = findViewById<TextInputEditText>(R.id.editTextEmail)
@@ -30,7 +31,6 @@ class RegisterActivity : BaseActivity() {
         val password = findViewById<TextInputEditText>(R.id.editTextPassword)
         val childName = findViewById<TextInputEditText>(R.id.editTextChildName)
         val birthDate = findViewById<TextInputEditText>(R.id.editTextDateOfBirth)
-        val address = findViewById<TextInputEditText>(R.id.editTextHome)
         val submitButton = findViewById<Button>(R.id.buttonSubmitRegister)
 
         setupDatePicker(birthDate)
@@ -56,11 +56,9 @@ class RegisterActivity : BaseActivity() {
             val strPassword = password.text.toString()
             val strChildName = childName.text.toString()
             val strBirthDate = birthDate.text.toString()
-            val strAddress = address.text.toString()
 
             if (strParent.isBlank() || strEmail.isBlank() || strPhone.isBlank() ||
                 strPassword.isBlank() || strChildName.isBlank() || strBirthDate.isBlank()
-                || strAddress.isBlank()
                 ) {
                 Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
             } else {
