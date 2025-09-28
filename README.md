@@ -1,10 +1,9 @@
 KindyStarts ✨
-Aplicación Android para la gestión y registro de tutores y alumnos en una institución infantil. Este proyecto sirve como una base sólida para una aplicación de gestión completa,
-implementando patrones de arquitectura modernos y buenas prácticas de desarrollo en Android.
+Aplicación Android para la gestión y registro de tutores y alumnos en una institución infantil.
 ---
 
 Figma
-
+https://www.figma.com/design/axc8qJWSfJiByNEzdnUCAT/KindyStarts?node-id=0-1&p=f
 
 ---
 
