@@ -1,4 +1,5 @@
 KindyStarts ✨
+
 Aplicación Android para la gestión y registro de tutores y alumnos en una institución infantil.
 ---
 
