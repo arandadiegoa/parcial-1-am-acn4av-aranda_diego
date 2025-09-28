@@ -7,12 +7,6 @@ https://www.figma.com/design/axc8qJWSfJiByNEzdnUCAT/KindyStarts?node-id=0-1&p=f
 
 ---
 
-🚀 Descripción General
-KindyStarts es una aplicación diseñada para simplificar el proceso de registro de nuevos miembros en un jardín de infantes o guardería. 
-La aplicación presenta un flujo de usuario claro, desde una pantalla de bienvenida hasta un formulario de registro detallado y una pantalla principal para usuarios autenticados.
-
----
-
 ✨ Características Principales
 Pantalla de Bienvenida (MainActivity):
 
