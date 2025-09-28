@@ -11,4 +11,6 @@
     <string name="text_home">"Domicilio"</string>
     <string name="text_hall">"Sala/Grupo"</string>
     <string name="text_register">"Registrar"</string>
+    <string name="text_upload_photo">"Subir Foto"</string>
+    <string name="text_photo_select">"Foto seleccionada ✓"</string>
 </resources>

@@ -17,12 +17,6 @@ class RegisterActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        val rootView = findViewById<View>(R.id.register_layout)
-
-        rootView.post {
-            rootView.requestFocus()
-        }
-
 
         // Referencias
         val parentName = findViewById<TextInputEditText>(R.id.editTextParentName)
@@ -31,9 +25,24 @@ class RegisterActivity : BaseActivity() {
         val password = findViewById<TextInputEditText>(R.id.editTextPassword)
         val childName = findViewById<TextInputEditText>(R.id.editTextChildName)
         val birthDate = findViewById<TextInputEditText>(R.id.editTextDateOfBirth)
+        val uploadPhoto = findViewById<TextInputEditText>(R.id.edit_text_upload_photo)
         val submitButton = findViewById<Button>(R.id.buttonSubmitRegister)
 
+        //Calendar
         setupDatePicker(birthDate)
+
+        //evitar que el teclado se abra automáticamente en el calendario
+        val rootView = findViewById<View>(R.id.register_layout)
+        rootView.post {
+            rootView.requestFocus()
+        }
+
+
+        //Upload photo
+        uploadPhoto.setOnClickListener {
+            getContent.launch("image/*")
+        }
+
 
         /*Options Halls */
 
@@ -49,6 +58,8 @@ class RegisterActivity : BaseActivity() {
         //Mostrar las opciones
         autoCompleteTextView.setAdapter(adapter)
 
+
+        //validaciones al seleccionar registrar
         submitButton.setOnClickListener {
             val strParent = parentName.text.toString()
             val strEmail = email.text.toString()
