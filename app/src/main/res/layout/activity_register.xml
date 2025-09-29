@@ -25,6 +25,7 @@
         android:layout_gravity="center_horizontal"
         android:drawablePadding="10dp"
         android:gravity="center_vertical"
+        android:text="@string/text_registerTitle"
         android:textSize="24sp"
         android:textStyle="bold"
         app:drawableEndCompat="@drawable/mi_logo_principal" />

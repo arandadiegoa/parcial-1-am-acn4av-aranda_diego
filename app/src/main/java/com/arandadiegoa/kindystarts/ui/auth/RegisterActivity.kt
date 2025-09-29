@@ -13,6 +13,11 @@ import com.arandadiegoa.kindystarts.ui.home.HomeActivity
 import com.google.android.material.textfield.TextInputEditText
 
 class RegisterActivity : BaseActivity() {
+
+    companion object {
+        const val extraChildName= "child_Name"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -75,6 +80,7 @@ class RegisterActivity : BaseActivity() {
             } else {
                 Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra(extraChildName, strChildName)
                 startActivity(intent)
                 finish()
             }
