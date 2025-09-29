@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.OpenableColumns
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.arandadiegoa.kindystarts.R
 import com.google.android.material.textfield.TextInputEditText
 import java.util.Calendar
@@ -14,6 +15,8 @@ import java.util.Calendar
 abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
         super.onCreate(savedInstanceState)
     }
 

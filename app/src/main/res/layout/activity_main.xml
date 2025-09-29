@@ -26,7 +26,6 @@
             android:text="@string/app_name"
             android:textSize="32sp"
             android:textStyle="bold"
-
             android:drawablePadding="12dp"
             android:gravity="center_vertical"
             app:drawableStartCompat="@drawable/mi_logo_principal" />
@@ -68,6 +67,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" >
