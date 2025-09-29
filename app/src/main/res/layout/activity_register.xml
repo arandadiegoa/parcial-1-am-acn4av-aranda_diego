@@ -14,7 +14,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/app_background_color"
-    android:padding="12dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="32dp"
     android:focusable="true"
     android:focusableInTouchMode="true"
     >
@@ -23,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:drawablePadding="10dp"
+        android:drawablePadding="12dp"
         android:gravity="center_vertical"
         android:text="@string/text_registerTitle"
         android:textSize="24sp"
@@ -242,7 +243,7 @@
         android:backgroundTint="@color/button"
         android:text="@string/text_register"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:textColor="@color/black"
         />
 
