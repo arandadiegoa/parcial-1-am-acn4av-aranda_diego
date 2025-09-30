@@ -33,6 +33,7 @@ class RegisterActivity : BaseActivity() {
         val uploadPhoto = findViewById<TextInputEditText>(R.id.edit_text_upload_photo)
         val submitButton = findViewById<Button>(R.id.buttonSubmitRegister)
 
+
         //Calendar
         setupDatePicker(birthDate)
 

@@ -20,6 +20,7 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 
+
     //Calendar
     protected fun setupDatePicker(editText: TextInputEditText) {
         editText.setOnClickListener {
