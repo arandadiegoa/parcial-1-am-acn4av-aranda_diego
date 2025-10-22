@@ -5,6 +5,7 @@ import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
 import android.provider.OpenableColumns
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -15,11 +16,11 @@ import java.util.Calendar
 abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        enableEdgeToEdge()
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         super.onCreate(savedInstanceState)
     }
-
 
     //Calendar
     protected fun setupDatePicker(editText: TextInputEditText) {
@@ -44,6 +45,7 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
+    /* TODO: Se cambia por Java
     //Obtener el nombre del archivo
     private fun getFileName(uri:Uri): String? {
         var fileName: String? = null
@@ -70,6 +72,7 @@ abstract class BaseActivity : AppCompatActivity() {
             uploadEditText.setText(fileName ?: getString(R.string.text_photo_select))
         }
     }
+    */
 
 
 }

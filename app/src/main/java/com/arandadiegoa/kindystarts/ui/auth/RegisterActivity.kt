@@ -1,6 +1,7 @@
 package com.arandadiegoa.kindystarts.ui.auth
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -12,16 +13,30 @@ import com.arandadiegoa.kindystarts.ui.base.BaseActivity
 import com.arandadiegoa.kindystarts.ui.home.HomeActivity
 import com.google.android.material.textfield.TextInputEditText
 
-class RegisterActivity : BaseActivity() {
+class RegisterActivity : BaseActivity(), PhotoPickerListener {
 
     companion object {
         const val extraChildName= "child_Name"
     }
 
+    // Declara el 'ayudante' que usaremos para pedir fotos.
+    private lateinit var photoPickerHelper: PhotoPickerHelper
+    private var selectedImageUri: Uri? = null
+
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        // Aplicamos el manejo de teclado a la vista raíz del layout
+        val rootView = findViewById<View>(R.id.register_layout)
+
+        //evitar que el teclado se abra automáticamente en el calendario
+        rootView.post {
+            rootView.requestFocus()
+        }
+
+        // La promesa 'lateinit' se cumple
+        photoPickerHelper = PhotoPickerHelper(this, this)
 
         // Referencias
         val parentName = findViewById<TextInputEditText>(R.id.editTextParentName)
@@ -33,20 +48,13 @@ class RegisterActivity : BaseActivity() {
         val uploadPhoto = findViewById<TextInputEditText>(R.id.edit_text_upload_photo)
         val submitButton = findViewById<Button>(R.id.buttonSubmitRegister)
 
-
         //Calendar
         setupDatePicker(birthDate)
 
-        //evitar que el teclado se abra automáticamente en el calendario
-        val rootView = findViewById<View>(R.id.register_layout)
-        rootView.post {
-            rootView.requestFocus()
-        }
 
-
-        //Upload photo
+        //abre la galería de imágenes
         uploadPhoto.setOnClickListener {
-            getContent.launch("image/*")
+            photoPickerHelper.launchImagePicker()
         }
 
 
@@ -86,5 +94,15 @@ class RegisterActivity : BaseActivity() {
                 finish()
             }
         }
+
     }
+    //Se recibe la foto
+    override fun onPhotoSelected(uri: Uri) {
+        selectedImageUri = uri //variable recibe su valor cuando llega la foto.
+
+        val uploadEditText = findViewById<TextInputEditText>(R.id.edit_text_upload_photo)
+        uploadEditText.setText(getString(R.string.text_photo_select)) //feedback al usuario
+    }
+
 }
+
